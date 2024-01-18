@@ -1,23 +1,13 @@
-from abc import ABC ,abstractmethod
-
-class Vehicle(ABC):
-    @abstractmethod
-    def go(self):
-        pass
-    @abstractmethod
-    def stop(self):
-        print("This car has stopped!!")
-class Car(Vehicle):
-    def go(self):
-        print("This car is drove!!")
+class Car:
+    color= None
 
 
-class motorcycle(Vehicle):
-    def go(self):
-        print("this motorcycle is going!!")
-
-
+def change_color(vehicle,color):
+    vehicle.color=color
 
 car=Car()
-car.stop()
-car.go()
+change_color(car,"red")
+car_2=Car()
+change_color(car_2,"green")
+print(car_2.color)
+print(car.color)
